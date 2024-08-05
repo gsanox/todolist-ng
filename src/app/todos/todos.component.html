@@ -1,0 +1,19 @@
+<!-- src/app/todo-list/todo-list.component.html -->
+<div class="todo-list">
+    <div *ngFor="let todo of todos" class="todo-item">
+      <h3>{{ todo.title }}</h3>
+      <p>{{ todo.description }}</p>
+      <p>Status: {{ todo.completed ? 'Completed' : 'Pending' }}</p>
+      <!-- <button (click)="updateTodo({ ...todo, completed: !todo.completed })">Toggle Status</button>
+      <button (click)="deleteTodo(todo.id)">Delete</button> -->
+      <button (click)="updateTodo(todo)">Update</button>
+      <button (click)="deleteTodo(todo.id)">Delete</button>
+    </div>
+  
+    <div class="todo-add">
+      <h3>Add New Todo</h3>
+      <input [(ngModel)]="newTodo.title" placeholder="Title" />
+      <input [(ngModel)]="newTodo.description" placeholder="Description" />
+      <button (click)="addTodo()">Add Todo</button>
+    </div>
+  </div>

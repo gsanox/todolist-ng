@@ -1,0 +1,12 @@
+<div class="todo-list">
+      <div *ngFor="let todo of todos" class="todo-item">
+        <app-todo-item (updateTodoEvent)="updateTodo(todo)" (deleteTodoEvent)="deleteTodo(todo.id)" [todo]="todo"></app-todo-item>
+      </div>
+  
+    <div class="todo-add">
+      <h3>Add New Todo</h3>
+      <input [(ngModel)]="newTodo.title" placeholder="Title" />
+      <input [(ngModel)]="newTodo.description" placeholder="Description" />
+      <button (click)="addTodo()">Add Todo</button>
+    </div>
+  </div>

@@ -1,0 +1,31 @@
+.main-nav {
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 1rem;
+  }
+  
+  .nav-link {
+    color: rgba(0,0,0,.5);
+    text-decoration: none;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-link.active {
+    color: rgba(0,0,0,.9);
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    color: rgba(0,0,0,.7);
+    text-decoration: underline;
+  }
